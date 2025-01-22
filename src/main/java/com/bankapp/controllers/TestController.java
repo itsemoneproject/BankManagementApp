@@ -17,4 +17,9 @@ public class TestController {
 	public String greet(@PathVariable("name") String name) {
 		return "Hello " + name + "!";
 	}
+	
+	@RequestMapping("/jsp_test")
+	public String jsp_test() {
+		return "jsp_test";
+	}
 }
