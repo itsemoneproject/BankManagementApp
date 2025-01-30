@@ -1,0 +1,33 @@
+
+
+#id_navbar {
+	display: flex;
+	background: rgb(128, 128, 255);
+}
+
+#id_menu:hover {
+	background: rgb(220, 220, 220);
+}
+
+#id_menu {
+	max-height: 30px;
+	max-width: 30px;
+	padding: 5px;
+}
+
+#id_menu_list {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: #bdbdff;
+    width: 20%;
+    height: 100%;
+}
+
+.menu_list_item {
+	padding: 15px;
+}
+
+.menu_list_item:hover {
+	background: rgb(220, 220, 220);
+}
