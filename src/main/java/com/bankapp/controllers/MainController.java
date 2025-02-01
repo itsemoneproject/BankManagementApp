@@ -17,4 +17,8 @@ public class MainController {
 	public String about() {
 		return "about";
 	}
+	@RequestMapping("/new_account") 
+	public String new_account() {
+		return "new_account";
+	}
 }
