@@ -10,7 +10,6 @@
 	</head>
 	<body>
 		<jsp:include page="navbar.jsp"/>
-		<h1>This is the new account page (currently empty)</h1>
 		<script src="new_account.js"></script>
 	</body>
 </html>
