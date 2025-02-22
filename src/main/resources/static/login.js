@@ -59,4 +59,8 @@ function login_form_generator(for_who) {
 	login_button.addEventListener("click", () => {
 		login_form.submit();
 	});	
+	let goto_create_account_button = document.getElementById("id_create_account_redirect");
+	goto_create_account_button.addEventListener("click", () => {
+		this.location.href = "/new_account"
+	});	
 })();

@@ -23,6 +23,7 @@
 				</div>
 				<div id="id_login_form_content"></div>
 				<input type="button" id="id_login_button" value="Login"/>
+				<input type="button" id="id_create_account_redirect" value="No Account? Create New Account"/>
 			</fieldset>
 		</form>
 		<script src="login.js"></script>
