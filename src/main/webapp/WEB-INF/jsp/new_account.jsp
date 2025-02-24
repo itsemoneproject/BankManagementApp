@@ -10,16 +10,16 @@
 	</head>
 	<body>
 		<jsp:include page="navbar.jsp"/>
-		<form id="id_new_account_form" method="GET" action="/create_account">
+		<form id="id_new_account_form" method="POST" action="/create_account">
 			<fieldset>
 			<legend>Create New Account</legend>
 				<div>
-					<label for="new_customer">New Customer Account</label>
-					<input type="radio" id="new_customer" name="account_selector" value="user_account" checked/>
+					<label for="id_user_account">New User Account</label>
+					<input type="radio" id="id_user_account" name="account_selector" value="user_account" checked/>
 				</div>
 				<div>
-					<label for="new_admin">New Admin Account</label>				
-					<input type="radio" id="new_admin" name="account_selector" value="admin_account"/>
+					<label for="id_admin_account">New Admin Account</label>				
+					<input type="radio" id="id_admin_account" name="account_selector" value="admin_account"/>
 				</div>
 				<div id="id_new_account_form_content"></div>
 				<input type="button" id="id_new_account_button" value="Create Account"/>

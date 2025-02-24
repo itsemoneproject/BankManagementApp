@@ -52,11 +52,31 @@ function login_form_generator(for_who) {
 	}
 })();
 
+function check_fields() {
+	const login_selector = document.getElementsByName("login_selector");
+	let for_who = null;
+	for (let i = 0; i < login_selector.length; i++) {
+	  if(login_selector[i].checked) {
+		for_who = login_selector[i].value;
+	  }
+	}
+
+	let e3 = document.getElementById("id_name").value;
+	if(e3 === "" || e3 === null) return false;
+	let e4 = document.getElementById("id_pass").value;
+	if(e4 === "" || e4 === null) return false;
+
+	return true;
+}
 
 (() => {
 	let login_button = document.getElementById("id_login_button");
 	let login_form = document.getElementById("id_login_form");
 	login_button.addEventListener("click", () => {
+		if(!check_fields()) { 
+			alert("NO FIELD IN THE FORM CAN BE EMPTY!");	
+			return;
+		}
 		login_form.submit();
 	});	
 	let goto_create_account_button = document.getElementById("id_create_account_redirect");

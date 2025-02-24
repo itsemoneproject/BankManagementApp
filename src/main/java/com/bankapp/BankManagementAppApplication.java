@@ -1,6 +1,6 @@
 package com.bankapp;
 
-import org.springframework.boot.ApplicationRunner;
+// import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -20,7 +20,7 @@ public class BankManagementAppApplication extends SpringBootServletInitializer {
 		SpringApplication.run(BankManagementAppApplication.class, args);
 	}
 
-		
+	/*	
 	@Bean
 	public ApplicationRunner applicationRunner(UserRepository userRepo) {
 		return args -> {
@@ -28,5 +28,5 @@ public class BankManagementAppApplication extends SpringBootServletInitializer {
 			userRepo.save(u1);
 		};
 	}
-	
+	*/
 }

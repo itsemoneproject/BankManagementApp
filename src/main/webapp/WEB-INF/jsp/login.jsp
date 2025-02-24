@@ -27,5 +27,18 @@
 			</fieldset>
 		</form>
 		<script src="login.js"></script>
+		<%
+			Object obj = request.getAttribute("error_type");
+			if (obj != null) {
+				String error_type = (String)obj;
+				if(error_type.equals("invalid_user")) {
+					out.println("<script>alert(\"Invalid User Name!\")</script>");
+				} else if(error_type.equals("invalid_admin")) {
+					out.println("<script>alert(\"Invalid Admin Name!\")</script>");
+				} else if(error_type.equals("invalid_password")) {
+					out.println("<script>alert(\"Invalid Password!\")</script>");
+				}
+			}
+		%>
 	</body>
 </html>
