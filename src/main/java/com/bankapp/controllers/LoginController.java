@@ -23,7 +23,7 @@ public class LoginController {
 	AdminService admin_service;
 	
 	@RequestMapping(value="/check_login", 
-					method=RequestMethod.GET)
+					method=RequestMethod.POST)
 	public String check_login(HttpSession session, HttpServletRequest request) {
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
@@ -38,6 +38,7 @@ public class LoginController {
 				return "login";
 			}
 			session.setAttribute("logged_in", true);
+			session.setAttribute("name", user.getUserName());
 			request.setAttribute("user", user);
 			return "user_profile";
 		} else { // admin_login
@@ -51,19 +52,18 @@ public class LoginController {
 				return "login";
 			}
 			session.setAttribute("logged_in", true);
+			session.setAttribute("name", admin.getAdmin_name());
 			request.setAttribute("admin", admin);
 			return "admin_profile";
 		}
 	}
 	
-	@RequestMapping(value="/user_profile", 
-					method=RequestMethod.POST)
+	@RequestMapping("/user_profile")
 	public String user_profile() {
 		return "user_profile";
 	}
 	
-	@RequestMapping(value="/admin_profile", 
-					method=RequestMethod.POST)
+	@RequestMapping("/admin_profile")
 	public String admin_profile() {
 		return "admin_profile";
 	}

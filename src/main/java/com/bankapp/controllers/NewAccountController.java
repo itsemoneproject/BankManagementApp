@@ -63,6 +63,7 @@ public class NewAccountController {
 			admin_service.addAdmin(admin);
 		}
 		
+		request.setAttribute("successful_account_creation", true);
 		return "login";
 	}
 }

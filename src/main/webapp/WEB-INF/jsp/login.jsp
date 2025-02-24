@@ -10,7 +10,7 @@
 	</head>
 	<body>
 		<jsp:include page="navbar.jsp"/>
-		<form id="id_login_form" method="GET" action="/check_login">
+		<form id="id_login_form" method="POST" action="/check_login">
 			<fieldset>
 			<legend>Login</legend>
 				<div>
@@ -28,7 +28,12 @@
 		</form>
 		<script src="login.js"></script>
 		<%
-			Object obj = request.getAttribute("error_type");
+			Object obj = request.getAttribute("successful_account_creation");
+			if(obj != null) {
+				out.println("<script>alert(\"Account was created successfully!\")</script>");
+			}
+			
+			obj = request.getAttribute("error_type");
 			if (obj != null) {
 				String error_type = (String)obj;
 				if(error_type.equals("invalid_user")) {

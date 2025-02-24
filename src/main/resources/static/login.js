@@ -74,7 +74,7 @@ function check_fields() {
 	let login_form = document.getElementById("id_login_form");
 	login_button.addEventListener("click", () => {
 		if(!check_fields()) { 
-			alert("NO FIELD IN THE FORM CAN BE EMPTY!");	
+			alert("No field in the form can be empty!");	
 			return;
 		}
 		login_form.submit();

@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ page import="com.bankapp.Entities.Admin" %>
-<!-- this file is strictly for testing stuff related to JSP, DO NOT USER FOR PROJECT RELATED TASKS -->
 
 <!DOCTYPE html>
 	<html>
@@ -24,11 +23,30 @@
 			<%
 				Object admin_obj = request.getAttribute("admin");
 				if(admin_obj != null) {
-					Admin admin;
-					admin = (Admin)admin_obj;
-					out.println(admin.toString());
+					Admin admin = (Admin)admin_obj;
+					out.println("<table><thead>");
+					out.println("<thead><tr><th scope=\"col\">Admin Profile</th></tr><thead><tbody>");
+				    
+				    out.println("<tr><th scope=\"row\">Admin ID</th>");
+				    out.println("<td>" + admin.getAdmin_id() + "</td>");
+				    out.println("</tr>");
+					
+				    out.println("<tr><th scope=\"row\">Admin name</th>");
+				    out.println("<td>" + admin.getAdmin_name() + "</td>");
+				    out.println("</tr>");
+				    
+					out.println("<tr><th scope=\"row\">First name</th>");
+					out.println("<td>" + admin.getFirst_name() + "</td>");
+				    out.println("</tr>");
+					
+				    out.println("<tr><th scope=\"row\">Last name</th>");
+				    out.println("<td>" + admin.getLast_name() + "</td>");
+				    out.println("</tr>");
+				    
+				    out.println("</tbody></table>");
 				}
 			%>
+			<input type="button" id="id_logout" value="Logout"></input>
 			<script src="admin_profile.js"></script>
 		</body>
 </html>

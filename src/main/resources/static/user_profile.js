@@ -10,3 +10,11 @@
 	];
 	generate_menu_list(menu, home_menu_list);
 })();
+
+
+(() => {
+	let logout = document.getElementById("id_logout");
+	logout.addEventListener("click", () => {
+		this.location.href = "/login"
+	});
+})();

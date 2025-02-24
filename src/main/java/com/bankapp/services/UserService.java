@@ -33,4 +33,15 @@ public class UserService {
 		}
 		return searching_for;
 	}
+
+	public User getUserByAccountNumber(long account_number) {
+		User searching_for = null;
+		for(User user : this.getAllUsers()) {
+			if(user.getAccountNumber() == account_number) {
+				searching_for = user;
+				break;
+			}
+		}
+		return searching_for;
+	}
 }
