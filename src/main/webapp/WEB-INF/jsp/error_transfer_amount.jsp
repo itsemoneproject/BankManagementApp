@@ -19,6 +19,7 @@
 		<ul>
 			<li>Negative amount.</li>
 			<li>Insufficient funds.</li>
+			<li>Incorrect Account Number.
 			<li>Other possible errors.</li>
 		</ul>
 		<input type="button" id="id_try_again" value="Try sending money again?"/>

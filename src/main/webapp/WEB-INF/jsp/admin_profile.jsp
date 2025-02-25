@@ -20,6 +20,7 @@
 					response.sendRedirect("/login");
 				}
 			%>
+			<div>
 			<%
 				Object admin_obj = request.getAttribute("admin");
 				if(admin_obj != null) {
@@ -46,7 +47,26 @@
 				    out.println("</tbody></table>");
 				}
 			%>
+			</div>
+			<br>
+			<div>
 			<input type="button" id="id_logout" value="Logout"></input>
+			</div>
+			<br>
+			<form method="POST" action="/admin_add_amount">
+				<fieldset>
+				<legend>Add amount</legend>
+				<div>
+					<label for="id_account_number">Account number :</label>
+					<input type="number" id="id_account_number" name="account_number"/>
+				</div>
+				<div>
+					<label for="id_amount_to_be_send">Amount :</label>
+					<input type="number" id="id_amount_to_be_send" name="amount_to_be_send"/>
+				</div>
+				<input type="submit" value="add amount"/>
+				</fieldset>
+			</form>
 			<script src="admin_profile.js"></script>
 		</body>
 </html>

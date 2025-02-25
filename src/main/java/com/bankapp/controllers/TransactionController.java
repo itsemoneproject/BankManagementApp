@@ -26,6 +26,9 @@ public class TransactionController {
 		long account_number = Integer.parseInt(request.getParameter("account_number"));
 		User to_user = user_service.getUserByAccountNumber(account_number);
 		User from_user = user_service.getUserByUserName((String)session.getAttribute("name"));
+		if(to_user == null) {
+			return "error_transfer_amount";
+		}
 		
 		float sender_balance = from_user.getAccountBalance();
 		if(sender_balance < amount) {
@@ -34,6 +37,23 @@ public class TransactionController {
 		
 		from_user.setAccountBalance(sender_balance - amount);
 		user_service.addUser(from_user);
+		to_user.setAccountBalance(to_user.getAccountBalance() + amount);
+		user_service.addUser(to_user);
+		return "transfer_success";
+	}
+
+	@RequestMapping("/admin_add_amount")
+	public String admin_add_amount(HttpServletRequest request) {
+		float amount = Integer.parseInt(request.getParameter("amount_to_be_send"));
+		if(amount < 0) {
+			return "error_transfer_amount";
+		}
+		
+		long account_number = Integer.parseInt(request.getParameter("account_number"));
+		User to_user = user_service.getUserByAccountNumber(account_number);
+		if(to_user == null) {
+			return "error_transfer_amount";
+		}
 		to_user.setAccountBalance(to_user.getAccountBalance() + amount);
 		user_service.addUser(to_user);
 		return "transfer_success";

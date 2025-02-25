@@ -1,11 +1,61 @@
 
 body {
-	padding: 0px;
-	margin: 0px;	
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+	/*background: linear-gradient(45deg, #3674B5, #578FCA);*/
 }
 
+form#id_login_form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto; /* centers the form horizontally */
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
 label {
-	display: inline-block;
-	width: 150px;
-	margin-right: 15px;
+    display: block;
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="button"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+}
+
+input[type="button"]:hover {
+    background-color: #0056b3;
 }

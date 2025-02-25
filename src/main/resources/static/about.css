@@ -3,3 +3,91 @@ body {
 	padding: 0px;
 	margin: 0px;	
 }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f9;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  /* Navbar Styling */
+  nav {
+    background-color: #004080;
+    padding: 10px 20px;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    padding: 8px 12px;
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  nav ul li:hover {
+    background-color: #003060;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* Main Content Styling */
+  main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  h1, h2 {
+    color: #004080;
+    margin-bottom: 10px;
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+
+  section {
+    margin-bottom: 20px;
+  }
+
+  ul {
+    list-style: disc inside;
+    margin-left: 20px;
+  }
+  
+ #contact-details {
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    margin-top: 20px;
+	margin-left: 30px;
+  }
+
+  /* Footer Styling */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #004080;
+    color: #fff;
+  }
+
